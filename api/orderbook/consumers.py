@@ -3,6 +3,7 @@ import json
 
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
+        print("Hello world")
         return self.accept()
 
     def disconnect(self, code):
@@ -10,7 +11,9 @@ class ChatConsumer(WebsocketConsumer):
 
     def receive(self, text_data=None, bytes_data=None):
         test_data_json = json.loads(text_data)
-        message = 'message: ' + test_data_json['message']
+
+        print(text_data)
+        message = '运维咖啡吧： ' + test_data_json['message']
 
         self.send(text_data=json.dumps({
             'message': message
