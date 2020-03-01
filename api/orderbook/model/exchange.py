@@ -1,4 +1,3 @@
-from django.db import models
 from sortedcontainers import SortedDict
 from enum import Enum
 
