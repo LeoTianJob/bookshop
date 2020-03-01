@@ -6,3 +6,6 @@ from django.http import HttpResponse
 
 def index(req):
     return HttpResponse('Hello World')
+
+def book(req):
+    return HttpResponse('Book')
